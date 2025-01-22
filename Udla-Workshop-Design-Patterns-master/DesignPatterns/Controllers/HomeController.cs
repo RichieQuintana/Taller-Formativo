@@ -35,14 +35,14 @@ namespace DesignPatterns.Controllers
         [HttpGet]
         public IActionResult AddMustang()
         {
-            _vehicleRepository.AddVehicle(new Car("red","Ford","Mustang"));
+            _vehicleRepository.AddVehicle(new Car("red","Ford","Mustang", 1));
             return Redirect("/");
         }
 
         [HttpGet]
         public IActionResult AddExplorer()
         {
-            _vehicleRepository.AddVehicle(new Car("red", "Ford", "Explorer"));
+            _vehicleRepository.AddVehicle(new Car("red", "Ford", "Explorer", 1));
             return Redirect("/");
         }
 

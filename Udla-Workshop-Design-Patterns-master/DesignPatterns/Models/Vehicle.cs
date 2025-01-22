@@ -24,13 +24,21 @@ namespace DesignPatterns.Models
 
         #region Constructors
 
-        public Vehicle(string color, string brand, string model, double fuelLimit = 10,int year)
+        public Vehicle(string color, string brand, string model, int year, double fuelLimit = 10)
         {
             ID = Guid.NewGuid();
             Color = color;
             Brand = brand;
             Model = model;
             FuelLimit = fuelLimit;
+            Year = year;
+        }
+
+        protected Vehicle(string color, string brand, string model, int year)
+        {
+            Color = color;
+            Brand = brand;
+            Model = model;
             Year = year;
         }
 
